@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/caja.css">
+</head>
+
+<body>
+<script type="module" src="js/caja.js"></script>
+<div class="caja-container">
+
+    <div class="header">
+
+        <h2>💰 Caja</h2>
+
+        <div class="acciones">
+
+            <button id="btnNuevoIngreso">
+                + Ingreso
+            </button>
+
+            <button id="btnNuevoGasto">
+                + Gasto
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="resumen">
+
+        <div class="card ingresos">
+            <h3>Ingresos</h3>
+            <span id="totalIngresos">RD$ 0.00</span>
+        </div>
+
+        <div class="card gastos">
+            <h3>Gastos</h3>
+            <span id="totalGastos">RD$ 0.00</span>
+        </div>
+
+        <div class="card balance">
+            <h3>Balance</h3>
+            <span id="balanceCaja">RD$ 0.00</span>
+        </div>
+
+    </div>
+
+    <div class="filtros">
+
+        <input
+            type="text"
+            id="buscarMovimiento"
+            placeholder="Buscar movimiento..."
+        >
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Fecha</th>
+                <th>Tipo</th>
+                <th>Concepto</th>
+                <th>Monto</th>
+                <th>Acciones</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tablaCaja"></tbody>
+
+    </table>
+
+</div>
+
+
+<div class="modal" id="modalMovimiento">
+
+    <div class="modal-content">
+
+        <h3 id="tituloModal">
+            Nuevo Movimiento
+        </h3>
+
+        <input
+            type="hidden"
+            id="movimientoId"
+        >
+
+        <input
+            type="hidden"
+            id="tipoMovimiento"
+        >
+
+        <input
+            type="text"
+            id="concepto"
+            placeholder="Concepto"
+        >
+
+        <input
+            type="number"
+            id="monto"
+            placeholder="Monto"
+        >
+
+        <div class="acciones-modal">
+
+            <button id="guardarMovimiento">
+                Guardar
+            </button>
+
+            <button id="cerrarModal">
+                Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

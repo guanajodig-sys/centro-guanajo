@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/dashboard.css"
+</head>
+
+    <body>
+        <div class="dashboard">
+
+    <h1>Dashboard</h1>
+
+    <div class="cards">
+
+        <div class="card ventas">
+            <h3>Ventas Hoy</h3>
+            <span id="ventasHoy">RD$ 0.00</span>
+        </div>
+
+        <div class="card gastos">
+            <h3>Gastos Hoy</h3>
+            <span id="gastosHoy">RD$ 0.00</span>
+        </div>
+
+        <div class="card ganancias">
+            <h3>Ganancia Neta</h3>
+            <span id="gananciaHoy">RD$ 0.00</span>
+        </div>
+
+        <div class="card inventario">
+            <h3>Productos</h3>
+            <span id="totalProductos">0</span>
+        </div>
+
+        <div class="card alerta">
+            <h3>Stock Bajo</h3>
+            <span id="stockBajo">0</span>
+        </div>
+
+        <div class="card clientes">
+            <h3>Clientes</h3>
+            <span id="totalClientes">0</span>
+        </div>
+
+    </div>
+
+    <div class="paneles">
+
+        <div class="panel">
+
+            <h2>Últimas Ventas</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaVentas"></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="panel">
+
+            <h2>Productos con Stock Bajo</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Existencia</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaStockBajo"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+<script src="js/dashboard.js"></script>
+</html>
