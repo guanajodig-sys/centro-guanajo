@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="css/inventario.css">
+    </head>
+        <div class="inventario-container">
+
+    <div class="header">
+
+        <h2>📦 Inventario</h2>
+
+        <button id="btnNuevoProducto">
+            + Nuevo Producto
+        </button>
+
+    </div>
+
+    <div class="busqueda">
+
+        <input
+            type="text"
+            id="buscarProducto"
+            placeholder="Buscar producto..."
+        >
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Existencia</th>
+                <th>Costo</th>
+                <th>Venta</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tablaInventario"></tbody>
+
+    </table>
+
+</div>
+
+<div class="modal" id="modalProducto">
+
+    <div class="modal-content">
+
+        <h3>Producto</h3>
+
+        <input
+            type="hidden"
+            id="productoId"
+        >
+
+        <input
+            type="text"
+            id="codigo"
+            placeholder="Código del producto"
+        >
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre"
+        >
+
+        <input
+            type="text"
+            id="categoria"
+            placeholder="Categoría"
+        >
+
+        <input
+            type="number"
+            id="cantidad"
+            placeholder="Cantidad"
+        >
+
+        <input
+            type="number"
+            id="costo"
+            placeholder="Costo"
+        >
+
+        <input
+            type="number"
+            id="precioVenta"
+            placeholder="Precio Venta"
+        >
+
+        <input
+            type="number"
+            id="minimo"
+            placeholder="Stock mínimo"
+        >
+
+        <div class="acciones-modal">
+
+            <button id="guardarProducto">
+                Guardar
+            </button>
+
+            <button id="cerrarModal">
+                Cancelar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+<script type="module" src="js/firebase-config.js"></script>
+<script type="module" src="js/inventario.js"></script>
+</html>
